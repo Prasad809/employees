@@ -1,0 +1,87 @@
+.custom-navbar {
+    background: var(--surface-color);
+    box-shadow: 0 2px 12px var(--shadow-color);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+    letter-spacing: 0.3px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.menu-icon {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 26px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: var(--surface-color);
+    box-shadow: 0 6px 20px var(--shadow-color);
+    border-radius: 10px;
+    min-width: 180px;
+    overflow: hidden;
+    z-index: 200;
+}
+
+.menu-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.menu-item:hover {
+    background: var(--accent-color-soft);
+}
+
+.menu-item.logout {
+    color: #dc2626;
+}
+
+.theme-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.theme-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.15s ease;
+}
+
+.theme-dot:hover {
+    transform: scale(1.15);
+}
+
+.theme-dot-active {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 0 2px var(--accent-color-soft);
+}

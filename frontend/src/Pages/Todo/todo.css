@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root{
+    --bg:#0c0f1a;
+    --card:#131728;
+    --card-border:#1f2540;
+    --accent:#5cefb0;
+    --accent2:#4f8fff;
+    --text:#e8ecf5;
+    --muted:#7a84a0;
+    --radius:16px;
+}
+
+/* Page */
+
+.todo-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:#0c0f1a;
+    background-image:
+    radial-gradient(circle at top right,rgba(92,239,176,.08),transparent 45%),
+    radial-gradient(circle at bottom left,rgba(79,143,255,.08),transparent 40%);
+    font-family:'DM Sans',sans-serif;
+}
+
+/* Card */
+
+.todo-card{
+    width:100%;
+    max-width:760px;
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+}
+
+/* Header */
+
+.todo-header{
+    margin-bottom:30px;
+}
+
+.todo-title{
+    margin:0;
+    color:var(--text);
+    font-size:2rem;
+    font-family:'Syne',sans-serif;
+    font-weight:700;
+}
+
+.todo-subtitle{
+    margin-top:8px;
+    color:var(--muted);
+}
+
+/* Form */
+
+.todo-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.todo-full{
+    grid-column:1/-1;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+}
+
+.todo-label{
+    color:var(--muted);
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:.6px;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+/* Material UI Dropdown */
+
+.field .MuiFormControl-root{
+    width:100%;
+}
+
+.field .MuiOutlinedInput-root{
+    border-radius:12px;
+    background:#fff;
+}
+
+/* Buttons */
+
+.todo-actions{
+    grid-column:1/-1;
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:10px;
+}
+
+.todo-btn{
+    padding:12px 26px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:.95rem;
+    font-family:'Syne',sans-serif;
+    font-weight:700;
+    transition:.25s;
+}
+
+.todo-btn-primary{
+    background:linear-gradient(135deg,var(--accent),#39d89f);
+    color:#09120e;
+    box-shadow:0 8px 18px rgba(92,239,176,.25);
+}
+
+.todo-btn-primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px rgba(92,239,176,.35);
+}
+
+.todo-btn-secondary{
+    background:transparent;
+    color:var(--text);
+    border:1px solid var(--card-border);
+}
+
+.todo-btn-secondary:hover{
+    background:rgba(255,255,255,.05);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.todo-page{
+    padding:20px;
+    align-items:flex-start;
+}
+
+.todo-card{
+    padding:24px;
+}
+
+.todo-title{
+    font-size:1.6rem;
+}
+
+.todo-form{
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+.todo-full{
+    grid-column:auto;
+}
+
+.todo-actions{
+    flex-direction:column;
+}
+
+.todo-btn{
+    width:100%;
+}
+
+}

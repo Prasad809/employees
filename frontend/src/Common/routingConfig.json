@@ -1,0 +1,70 @@
+{
+    "headComponents": [
+        {
+            "name": "Login",
+            "path": "/Login",
+            "component":"Login/Login",
+            "id": 0
+        },
+        {
+            "name": "SignUp",
+            "path": "/",
+            "component":"Login/SignUp",
+            "id": 1
+        },
+        {
+            "name": "Dashboard",
+            "path": "/Dashboard",
+            "component":"Dashboard/Dashboard",
+            "id": 2
+        },
+        {
+            "name": "Group",
+            "path": "/Group",
+            "component":"Group/Group",
+            "id": 3
+        },
+        {
+            "name": "Session",
+            "path": "/failure",
+            "component":"Session/Session",
+            "id": 4
+        },
+        {
+            "name": "UserProfile",
+            "path": "/UserSummary",
+            "component":"UserProfile/UserProfile",
+            "id": 5
+        },
+        {
+            "name": "Notification",
+            "path": "/Notification",
+            "component":"Notification/Notification",
+            "id": 6
+        },
+        {
+            "name": "GroupsDetails",
+            "path": "/GroupsDetails",
+            "component":"Group/GroupsDetails",
+            "id": 7
+        },
+        {
+            "name": "Todo",
+            "path": "/Todo",
+            "component":"Todo/Todo",
+            "id": 8
+        },
+        {
+            "name": "Employees",
+            "path": "/Employees",
+            "component": "Employee/Employee",
+            "id": 9
+        },
+        {
+            "name": "InActEmployee",
+            "path": "/InActEmployee",
+            "component": "Employee/InActEmployee",
+            "id": 10
+        }
+    ]
+}
