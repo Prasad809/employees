@@ -33,7 +33,7 @@ const signUp = async (req, res) => {
 const signIn = async (req, res) => {
     try {
         const { email, password } = req.body;
-
+        console.log(email,password)
         if (!email || !password) {
             return res.status(400).json({
                 status: false,

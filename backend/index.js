@@ -6,11 +6,13 @@ const userRouter = require("./Users/Router");
 const employeeRouter = require("./Employees/Router");
 const auth = require("./AuthJwt/Auth");
 const cmgpd = require("./AuthJwt/serverCmgpd");
+const decryptMiddleware = require("./EncrptDecrypt/DecryptMiddleware");
 
 const PORT = process.env.PORT || 8082;
 
 const app = express();
 app.use(express.json());
+app.use(decryptMiddleware);
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors({

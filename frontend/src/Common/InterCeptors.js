@@ -51,11 +51,25 @@ function AxiosMemory({ children }) {
         const encType = lookUpDtls?.encypt;
         const lookUpArray = lookUpDtls?.lookUp || [];
 
-        console.log(encType,"1234");
-        console.log(lookUpArray,"lookUpArray");
         const sensitiveFields = new Set(
           lookUpArray.map(item => item.value.toLowerCase())
         );
+        if (config.data && typeof config.data === "object") {
+          Object.keys(config.data).forEach((key) => {
+            if (
+              sensitiveFields.has(key.toLowerCase()) &&
+              config.data[key] !== undefined &&
+              config.data[key] !== null &&
+              config.data[key] !== ""
+            ) {
+              if (encType === "AES") {
+                config.data[key] = encryptAES(config.data[key]);
+              } else if (encType === "RSA") {
+                config.data[key] = encryptRSA(config.data[key]);
+              }
+            }
+          });
+        }
         return config;
       },
       error => Promise.reject(error)

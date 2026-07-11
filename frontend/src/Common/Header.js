@@ -50,7 +50,6 @@ function Header() {
                 </div>
 
                 <div className="nav-right" ref={menuRef}>
-                    <div style={{paddingRight:"20px",height:"50px",border:"3px solid red",width:"50px",borderRadius:"30px",fontSize:"30px"}}>{avatar}</div>
                     <ThemeSwitcher />
 
                     <Tooltip title="Menu">

@@ -295,7 +295,7 @@ function Employee({ setNxt }) {
                 <div className="modal-overlay">
                     <div className="modal-box">
                         <p>
-                            Do you want to activate <b>{selectEmp?.name}</b>?
+                            Do you want to InActivate <b>{selectEmp?.name}</b>?
                         </p>
 
                         <div className="modal-actions">

@@ -11,9 +11,7 @@ MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A52frSghyhEdghj52hgj
 
 export const encryptRSA = (data) => {
   const encryptor = new JSEncrypt();
-  encryptor.setPublicKey(PUBLIC_KEY);
-  console.log(data,encryptor.encrypt(String(data)),encryptor.encrypt(String("1234")));
-  
+  encryptor.setPublicKey(PUBLIC_KEY);  
   return encryptor.encrypt(String(data));
 };
 
