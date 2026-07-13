@@ -1,4 +1,6 @@
 const db = require("../dbConnection");
+require('dotenv').config();
+const encyptTy = process.env.ENCTYPE;
 
 const cmgpd = async (req, res) => {
     const [rows] = await db.query("SELECT * FROM cmgpd");
@@ -12,7 +14,7 @@ const cmgpd = async (req, res) => {
             return null;
         }).filter(Boolean);
     try {
-        return res.json({ status: true, message: [{ code: "1002", description: "data retrieve successfully" }], lookUp: response, encypt: "AES" }).status(200)
+        return res.json({ status: true, message: [{ code: "1002", description: "data retrieve successfully" }], lookUp: response, encypt: encyptTy }).status(200)
     } catch (error) {
         return res.json({ status: false, message: [{ code: "error", description: "Internal Server Problem" }] }).status(500)
     }
